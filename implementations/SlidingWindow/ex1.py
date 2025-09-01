@@ -1,16 +1,14 @@
-arr = [1,2,3,4,5,6,7,8,4,3,1]
+"""
+    - Print all windows of size k
+"""
 
-win_start = 0
-curr_win_sum = 0
+arr = [1,9,8,2,4,6,11,7,9,3,5,12,0,18]
 
 k = int(input("Enter k: "))
 
+win_start = 0
 
 for win_end in range(len(arr)):
-    curr_win_sum += arr[win_end]
-
-    if (win_end >= k-1):
-        print(f"Window [{win_start}:{win_end}] has sum: {curr_win_sum}.")
-
-        curr_win_sum - arr[win_start]
+    if (win_end >= k - 1):
+        print(arr[win_start:win_end+1])
         win_start+=1
