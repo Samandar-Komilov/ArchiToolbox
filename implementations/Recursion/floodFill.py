@@ -1,26 +1,26 @@
-import cProfile
 import sys
 
 # NOT FINISHED!
 
 im = [
-    list('..########################...........'),
-    list('..#......................#...#####...'),
-    list('..#..........########....#####...#...'),
-    list('..#..........#......#............#...'),
-    list('..#..........########.........####...'),
-    list('..######......................#......'),
-    list('.......#..#####.....###########......'),
-    list('.......####...#######................')
+    list("..########################..........."),
+    list("..#......................#...#####..."),
+    list("..#..........########....#####...#..."),
+    list("..#..........#......#............#..."),
+    list("..#..........########.........####..."),
+    list("..######......................#......"),
+    list(".......#..#####.....###########......"),
+    list(".......####...#######................"),
 ]
 
 HEIGHT = len(im)
 WIDTH = len(im[0])
 
+
 def floodFill(image: list, x: int, y: int, newChar: str, oldChar: str = None) -> None:
     if oldChar == newChar or im[y][x] != oldChar:
-        return 
-    
+        return
+
     printImage(im)
     # Change the neighboring characters.
     if y + 1 < HEIGHT and im[y + 1][x] == oldChar:
@@ -33,15 +33,16 @@ def floodFill(image: list, x: int, y: int, newChar: str, oldChar: str = None) ->
         floodFill(im, x - 1, y, newChar, oldChar)
         return
 
+
 def printImage(image):
     for y in range(HEIGHT):
-    # Print each row.
+        # Print each row.
         for x in range(WIDTH):
             # Print each column.
             sys.stdout.write(image[y][x])
-        sys.stdout.write('\n')
-    sys.stdout.write('\n')
+        sys.stdout.write("\n")
+    sys.stdout.write("\n")
 
 
 printImage(im)
-floodFill(im, 1, 1, 'o')
+floodFill(im, 1, 1, "o")

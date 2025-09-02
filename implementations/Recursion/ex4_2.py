@@ -1,5 +1,3 @@
-import cProfile
-
 def power(x: int, n: int) -> int:
     if n == 0:
         print(f"[OPERATION] {x}**{n}")
@@ -15,4 +13,4 @@ def power(x: int, n: int) -> int:
     return res
 
 
-print(power(2,6))
+print(power(2, 6))

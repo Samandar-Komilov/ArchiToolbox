@@ -1,5 +1,5 @@
 """
-    - Longest Substring Without Repeating Characters (assume small alphabet)
+- Longest Substring Without Repeating Characters (assume small alphabet)
 """
 
 s = "abccabcbb"
