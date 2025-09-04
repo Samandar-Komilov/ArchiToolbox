@@ -129,3 +129,49 @@ for window_end in range(len(arr)):
 **Output:** `4` (The substring "araa" has distinct chars 'a' and 'r').
 
 ---
+
+Of course! Let's first solidify your string-based sliding window skills and then move on to the versatile Two Pointers technique.
+
+---
+
+## String-Based Sliding Window Practice Problems
+
+**16. Maximum Number of Vowels in a Substring of Given Length**
+**Task:** Given a string `s` and an integer `k`, return the maximum number of vowel letters ('a', 'e', 'i', 'o', 'u') in any substring of `s` with length `k`.
+**Why it's good:** This is a **fixed window** problem on a string. It practices simple condition checks within a window.
+**Example:** `s = "abciiidef", k = 3` → Output: `3` (substring "iii" has 3 vowels).
+**Hint:** Create a set of vowels for easy checking. Calculate vowels in the first window. As you slide, subtract if the left char is a vowel and add if the new right char is a vowel.
+
+**17. Find All Anagrams in a String (Brute-Force Check)**
+**Task:** Given two strings `s` and `p`, return an array of all the start indices of `p`'s anagrams in `s`. *For practice, you can compare frequency maps for each window without optimization.*
+**Why it's good:** This is a **fixed window** problem where the window size is `len(p)`. It practices building and comparing frequency maps.
+**Example:** `s = "cbaebabacd", p = "abc"` → Output: `[0, 6]` (Anagrams: "cba" at start index 0, "bac" at start index 6).
+**Hint:**
+1. Build a frequency map for `p`.
+2. For each window in `s` of size `len(p)`, build its own frequency map.
+3. If the maps are equal, save the starting index.
+
+**18. Longest Nice Substring (Simple Check)**
+**Task:** A string is "nice" if it contains every letter of its alphabet in both uppercase and lowercase. Given a string `s`, return the longest nice substring. *Use a sliding window to check all possible substrings.*
+**Why it's good:** This is a **variable window** problem that practices checking a complex condition. It forces you to think about what makes a window invalid.
+**Example:** `s = "YazaAay"` → Output: `"aAa"` (contains 'a' and 'A').
+**Hint:** For a given window, check if for every lowercase letter present, its uppercase version is also present, and vice versa. If not, the window is not "nice". (This is a brute-force approach, good for practice).
+
+**19. Minimum Window Substring (Simplified Target: "ABC")**
+**Task:** Given strings `s` and `t`, find the minimum window in `s` which contains all the characters in `t` (including duplicates). *Start with a small, fixed `t` like "ABC" to focus on the window mechanics.*
+**Why it's good:** This is the classic **variable window** problem. It practices growing a window until it meets a condition (has all required chars) and then shrinking to find the minimum valid window.
+**Example:** `s = "ADOBECODEBANC", t = "ABC"` → Output: `"BANC"`.
+**Hint:**
+1. Create a frequency map `need` for `t`.
+2. Create a map `window` for the current window in `s`.
+3. Expand `right`. When `window` has all chars in `need` (with sufficient counts), the window is valid.
+4. **While** valid, shrink `left` to find the smallest window, updating the answer.
+
+**20. Replace the Longest Repeating Character (K Changes)**
+**Task:** Given a string `s` and an integer `k`, you can change any character to any other uppercase English character at most `k` times. Find the length of the longest substring containing the same letter.
+**Why it's good:** This is a clever **variable window** problem. The condition for a valid window is not about unique counts but about the cost to make all letters the same.
+**Example:** `s = "AABABBA", k = 1` → Output: `4` (Replace the middle 'B' with 'A' to get "AAAABBA", the substring "AAAA" has length 4).
+**Hint:** The key insight: a window is valid if `(window_length - count_of_most_frequent_char) <= k`. This means the number of changes needed doesn't exceed `k`. Shrink the window if this condition is violated.
+
+---
+
