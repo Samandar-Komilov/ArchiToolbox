@@ -1,50 +1,86 @@
-# Two Pointers Exercises
+# Two Pointers Approach: 50 LeetCode Problems by Category
 
-The Two Pointers technique is incredibly versatile. Here are 25 problems categorized by the specific pattern they use, starting from easiest to most complex.
+Here is a list of 50 LeetCode problems, categorized by the specific two-pointer technique used to solve them. This approach will help you build your intuition and recognize the patterns associated with each type.
 
-### Category 1: Opposite Ends (The Classic Pattern)
-*Ideal for sorted arrays. One pointer at the start, one at the end. They move towards each other based on a condition.*
+## 1. Opposite Ends (Converging Pointers)
 
-1.  **Two Sum II (Input Array is Sorted):** Find two numbers that add up to a target.
-2.  **Reverse String:** Reverse the array of characters in-place.
-3.  **Valid Palindrome:** Check if a string reads the same forwards and backwards, ignoring non-alphanumeric chars.
-4.  **Squares of a Sorted Array:** Given sorted ints (negative & positive), return squares sorted in non-decreasing order.
-5.  **3Sum:** Find all unique triplets that add up to zero. (Uses a fixed pointer and then two pointers for the remainder).
-6.  **3Sum Closest:** Find three integers whose sum is closest to a target.
-7.  **4Sum:** Find all unique quadruplets that add up to a target.
-8.  **Container With Most Water:** Find two lines that together with the x-axis form a container that holds the most water.
+This is the most common two-pointer pattern. Pointers start at opposite ends of a sorted array or a similar data structure and move towards each other, typically to find a pair of elements that satisfy a condition.
 
-### Category 2: Same Direction (Fast & Slow Pointers)
-*Often used to detect cycles or find a specific node in a linked list.*
+* **Easy:**
+    1.  [167] Two Sum II - Input array is sorted
+    2.  [344] Reverse String
+    3.  [125] Valid Palindrome
+    4.  [905] Sort Array By Parity
+    5.  [88] Merge Sorted Array
+    6.  [977] Squares of a Sorted Array
+    7.  [26] Remove Duplicates from Sorted Array
+    8.  [283] Move Zeroes
+    9.  [1099] Two Sum Less Than K
+    10. [11] Container With Most Water
+    11. [15] 3Sum
+    12. [16] 3Sum Closest
+    13. [42] Trapping Rain Water
+    14. [680] Valid Palindrome II
+    15. [189] Rotate Array
 
-9.  **Linked List Cycle:** Determine if a linked list has a cycle.
-10. **Linked List Cycle II:** Find the node where the cycle begins.
-11. **Middle of the Linked List:** Return the middle node.
-12. **Remove Duplicates from Sorted Array:** Do it in-place with O(1) extra space.
-13. **Remove Duplicates from Sorted List:** Delete all duplicates such that each element appears only once.
-14. **Remove Element:** Remove all instances of a value in-place and return the new length.
+* **Medium:**
+    16. [26] Remove Duplicates from Sorted Array II
+    17. [82] Remove Duplicates from Sorted List II
+    18. [392] Is Subsequence
+    19. [881] Boats to Save People
+    20. [986] Interval List Intersections
 
-### Category 3: Same Direction (Sliding Window)
-*You've been practicing this! It's a subset of Two Pointers.*
+## 2. Same Direction (Fast-Slow Pointers)
 
-15. **Minimum Size Subarray Sum:** (Reviewed) Find the minimal length of a subarray sum ≥ target.
-16. **Longest Substring Without Repeating Characters:** (Reviewed) Find the length of the longest substring w/o repeating chars.
-17. **Permutation in String:** (Reviewed) Check if `s2` contains a permutation of `s1`.
-18. **Find All Anagrams in a String:** (Reviewed) Find all start indices of `p`'s anagrams in `s`.
-19. **Longest Repeating Character Replacement:** (Reviewed) Find the longest substring after performing at most `k` changes.
+This technique is often used in linked lists and arrays to detect cycles, find the middle of the list, or solve problems where one pointer needs to "look ahead" of the other.
 
-### Category 4: Read/Write Pointers (In-place Operations)
-*One pointer reads the data, another writes the output in the same array.*
+* **Easy:**
+    21. [141] Linked List Cycle
+    22. [876] Middle of the Linked List
+    23. [234] Palindrome Linked List
+    24. [202] Happy Number
+    25. [206] Reverse Linked List
+    26. [19] Remove Nth Node From End of List
+    27. [83] Remove Duplicates from Sorted List
+    28. [160] Intersection of Two Linked Lists
+    29. [21] Merge Two Sorted Lists
 
-20. **Remove Duplicates from Sorted Array II:** Allow duplicates to appear at most *twice* and return the new length.
-21. **Move Zeroes:** Move all 0's to the end while maintaining the relative order of non-zero elements.
-22. **Sort Colors (Dutch National Flag):** Sort an array of 0s, 1s, and 2s in-place.
+* **Medium:**
+    30. [142] Linked List Cycle II
+    31. [287] Find the Duplicate Number
+    32. [1721] Swapping Nodes in a Linked List
+    33. [143] Reorder List
 
-### Category 5: Multi-Sequence Pointers
-*Pointers start at the beginning of different arrays or strings.*
+## 3. Same Direction (Sliding Window)
 
-23. **Merge Sorted Array:** Merge `nums2` into `nums1` in-place, which has extra space.
-24. **Interval List Intersections:** Given two lists of intervals, find their intersection.
-25. **Backspace String Compare:** Given two strings `s` and `t`, return `true` if they are equal when both are typed into empty text editors. `'#'` means a backspace character.
+This pattern uses two pointers (typically `left` and `right`) to define a "window" over an array or string. The pointers move in the same direction, expanding and contracting the window to find a subarray or substring that satisfies a certain condition.
 
-This list provides a comprehensive tour of the Two Pointers technique. Start with Category 1 to build the fundamental intuition of pointers moving from opposite ends, then move through the others. Happy coding
+* **Easy:**
+    34. [209] Minimum Size Subarray Sum
+    35. [1004] Max Consecutive Ones III
+
+* **Medium:**
+    36. [3] Longest Substring Without Repeating Characters
+    37. [424] Longest Repeating Character Replacement
+    38. [567] Permutation in String
+    39. [713] Subarray Product Less Than K
+    40. [795] Number of Subarrays with Bounded Maximum
+    41. [76] Minimum Window Substring
+    42. [340] Longest Substring with At Most K Distinct Characters
+    43. [438] Find All Anagrams in a String
+    44. [1456] Maximum Number of Vowels in a Substring of Given Length
+
+## 4. Read-Write Pointers (In-place operations)
+
+This specialized pattern uses two pointers that move at different rates to modify an array in-place, often to remove or rearrange elements without using extra space. One pointer "reads" from the original position, while the other "writes" to a new, compressed position.
+
+* **Easy:**
+    45. [26] Remove Duplicates from Sorted Array
+    46. [27] Remove Element
+    47. [283] Move Zeroes
+    48. [905] Sort Array By Parity
+
+* **Medium:**
+    49. [75] Sort Colors
+    50. [80] Remove Duplicates from Sorted Array II
+
