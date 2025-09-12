@@ -37,7 +37,7 @@ This technique is often used in linked lists and arrays to detect cycles, find t
 * **Easy:**
     21. [141] Linked List Cycle
     22. [876] Middle of the Linked List
-    23. [234] Palindrome Linked List
+    23. [234] Palindrome Linked List ⏳
     24. [202] Happy Number
     25. [206] Reverse Linked List
     26. [19] Remove Nth Node From End of List
