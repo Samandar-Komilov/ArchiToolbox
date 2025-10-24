@@ -11,16 +11,26 @@ The final sorted array should not be returned by the function, but instead be st
 
 class Solution:
     def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
         for i in range(0, n):
             nums1[m + i] = nums2[i]
 
         nums1.sort()
+    
+    def merge_better(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+        wp, rp1, rp2 = len(nums1) - 1, m - 1, n - 1
+        
+        while (rp2 >= 0):
+            if (rp1 >= 0 and nums1[rp1] > nums2[rp2]):
+                nums1[wp] = nums1[rp1]
+                rp1 -= 1
+            else:
+                nums1[wp] = nums2[rp2]
+                rp2 -= 1
+            
+            wp -= 1
 
 
 sol = Solution()
-n1, n2 = [0], [1]
-sol.merge(n1, 0, n2, 1)
+n1, n2 = [1, 2, 3, 0, 0, 0], [6, 7, 8]
+sol.merge_better(n1, 3, n2, 3)
 print(n1)
