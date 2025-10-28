@@ -14,7 +14,7 @@ def merge_arrays(l1: list[int], l2: list[int]) -> list[int]:
     
     wp, rp1, rp2 = len(l1) - 1, len1 - 1, len2 - 1
     while (wp >= 0 and rp1 >= 0 and rp2 >= 0):
-        if (rp1 >= 0 and l1[rp1] > l2[rp2]):
+        if (rp1 >= 0 and l1[rp1] >= l2[rp2]):
             l1[wp] = l1[rp1]
             rp1 -= 1
         else:
