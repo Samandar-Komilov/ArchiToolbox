@@ -30,9 +30,29 @@ def ex11(head: Node) -> bool:
     return False
 
 
-def ex12():
+def ex12(head: Node) -> Node | None:
     "Find start node of cycle in linked list."
-    pass
+    if head is None:
+        return None
+
+    fast, slow = head, head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+        if fast == slow:
+            break
+    
+    if fast is None or fast.next is None:
+        return None
+    
+    slow2 = head
+    while slow != slow2:
+        slow = slow.next
+        slow2 = slow2.next
+    
+    return slow
     
 
 def ex13(head: Node) -> Node | None:
@@ -106,6 +126,7 @@ def ex15(headA: Node, headB: Node) -> Node | None:
 
 def ex16():
     "Find length of longest palindrome substring using expand-around-center (two pointers growing)."
+    pass
 
         
 # -------- TESTS --------- #

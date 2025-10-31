@@ -28,49 +28,52 @@ Two-pointers mastery requires coverage of all variants:
 
 #### Opposite Ends – Basic Pair Finding
 
-1. Find two numbers in a sorted array that sum to a target.
-2. Find if a string is a palindrome ignoring non-alphanumeric characters.
-3. Merge two sorted arrays into one sorted array in place.
-4. Remove all duplicates from a sorted array (return length).
-5. Remove a given value in place from array.
-6. Square each element in a sorted array and return sorted squares.
-7. Move all zeros to the end while maintaining order.
-8. Reverse words in a string in place (no split/extra array).
+1. [0167] Find two numbers in a sorted array that sum to a target.
+2. [0125] Find if a string is a palindrome ignoring non-alphanumeric characters.
+3. [0088] Merge two sorted arrays into one sorted array in place.
+4. [0026] Remove all duplicates from a sorted array (return length).
+5. [0027] Remove a given value in place from array.
+6. [0977] Square each element in a sorted array and return sorted squares.
+7. [0283] Move all zeros to the end while maintaining order.
+8. [0151] Reverse words in a string in place (no split/extra array).
 9. Partition array into negatives and non-negatives in place.
-10. Find the container with most water (max area between two lines).
+10. [0011] Find the container with most water (max area between two lines).
 
 #### Fast–Slow Pointers – Movement and Detection
 
-11. Detect cycle in linked list.
-12. Find start node of cycle in linked list. ⏳
-13. Find the middle node of linked list.
-14. Remove the nth node from end of linked list in one pass.
-15. Find length of longest palindrome substring using expand-around-center (two pointers growing).
-16. Find intersection node of two linked lists (if exists).
+11. [0141] Detect cycle in linked list.
+12. [0142] Find start node of cycle in linked list. ⏳
+13. [0876] Find the middle node of linked list.
+14. [0019] Remove the nth node from end of linked list in one pass.
+15. [0005] Find length of longest palindrome substring using expand-around-center (two pointers growing). ⏳
+16. [0160] Find intersection node of two linked lists (if exists).
 
 #### Sliding Window – Fixed and Variable
 
 17. Find max sum of subarray of length *k*.
-18. Find smallest subarray with sum ≥ target.
-19. Find longest substring with at most *k* distinct characters.
-20. Find longest substring without repeating characters.
-21. Minimum window substring containing all characters of another string.
-22. Longest substring with equal number of 0s and 1s (convert then use prefix+two pointers).
-23. Longest substring with same letter after ≤k replacements.
-24. Count number of substrings containing at most *k* distinct characters.
+    17.1. [2461] Maximum Sum of Distinct Subarrays With Length K
+18. [0209] Find smallest subarray with sum ≥ target.
+19. [0340] Find longest substring with at most *k* distinct characters.
+20. [0003] Find longest substring without repeating characters.
+    20.1. [0395] Longest Substring with At Least K Repeating Characters
+21. [0076] Minimum window substring containing all characters of another string.
+22. [2609] Longest substring with equal number of 0s and 1s (convert then use prefix+two pointers).
+23. [0424] Longest substring with same letter after ≤k replacements.
+24. [3325] Count number of substrings containing at most *k* distinct characters.
 
 #### Two-Pointer Partitioning / In-Place Rearrangement
 
-25. Sort colors (Dutch National Flag).
-26. Remove duplicates allowing at most two occurrences.
-27. Merge intervals (requires sorting + scanning with overlapping checks).
-28. Sort array by parity (evens before odds).
+25. [0075] Sort colors (Dutch National Flag).
+26. [0080] Remove duplicates allowing at most two occurrences.
+27. [0056] Merge intervals (requires sorting + scanning with overlapping checks).
+28. [0905] Sort array by parity (evens before odds).
 29. Move all positive numbers before negative numbers preserving order (stable partition).
 
 #### Complex / Mixed Pattern
 
-30. 3Sum – find all unique triplets summing to zero.
+30. [0015] 3Sum – find all unique triplets summing to zero.
     (Contains sorting + opposite-end + skip-duplicate control—tests entire mastery.)
+    30.1. [0016] 3Sum Closest
 
 !!! note
     When you can implement all 30 with no hesitation and reason about variant edge cases verbally, your two-pointer reflex is complete.
@@ -94,6 +97,7 @@ Hashtable mastery means pattern fluency in:
 #### Frequency Counting (Fundamentals)
 
 1. Count character frequencies in a string.
+    1.1. [0451] Sort Characters By Frequency
 2. Count word frequencies in a paragraph (ignore punctuation/case).
 3. Find the first non-repeating character in a string.
 4. Check if two strings are anagrams.
