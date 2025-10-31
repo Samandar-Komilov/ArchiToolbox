@@ -42,7 +42,7 @@ Two-pointers mastery requires coverage of all variants:
 #### Fast–Slow Pointers – Movement and Detection
 
 11. Detect cycle in linked list.
-12. Find start node of cycle in linked list.
+12. Find start node of cycle in linked list. ⏳
 13. Find the middle node of linked list.
 14. Remove the nth node from end of linked list in one pass.
 15. Find length of longest palindrome substring using expand-around-center (two pointers growing).
