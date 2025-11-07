@@ -28,31 +28,32 @@ Two-pointers mastery requires coverage of all variants:
 
 #### Opposite Ends – Basic Pair Finding
 
-1. [0167] Find two numbers in a sorted array that sum to a target.
-2. [0125] Find if a string is a palindrome ignoring non-alphanumeric characters.
-3. [0088] Merge two sorted arrays into one sorted array in place.
-4. [0026] Remove all duplicates from a sorted array (return length).
-5. [0027] Remove a given value in place from array.
-6. [0977] Square each element in a sorted array and return sorted squares.
-7. [0283] Move all zeros to the end while maintaining order.
-8. [0151] Reverse words in a string in place (no split/extra array).
-9. Partition array into negatives and non-negatives in place.
-10. [0011] Find the container with most water (max area between two lines).
+1. [0167] Find two numbers in a sorted array that sum to a target. ✅
+2. [0125] Find if a string is a palindrome ignoring non-alphanumeric characters. ✅
+3. [0088] Merge two sorted arrays into one sorted array in place. ✅
+4. [0026] Remove all duplicates from a sorted array (return length). ✅
+5. [0027] Remove a given value in place from array. ✅
+6. [0977] Square each element in a sorted array and return sorted squares. ✅
+7. [0283] Move all zeros to the end while maintaining order. ✅
+8. [0151] Reverse words in a string in place (no split/extra array). ✅
+9. Partition array into negatives and non-negatives in place. ✅
+10. [0011] Find the container with most water (max area between two lines). ✅
 
 #### Fast–Slow Pointers – Movement and Detection
 
-11. [0141] Detect cycle in linked list.
-12. [0142] Find start node of cycle in linked list. ⏳
-13. [0876] Find the middle node of linked list.
-14. [0019] Remove the nth node from end of linked list in one pass.
-15. [0005] Find length of longest palindrome substring using expand-around-center (two pointers growing). ⏳
-16. [0160] Find intersection node of two linked lists (if exists).
+11. [0141] Detect cycle in linked list. ✅
+12. [0142] Find start node of cycle in linked list. 🔄
+13. [0876] Find the middle node of linked list. ✅
+14. [0019] Remove the nth node from end of linked list in one pass. ✅
+15. [0005] Find length of longest palindrome substring using expand-around-center (two pointers growing). 🔄
+16. [0160] Find intersection node of two linked lists (if exists). 🔄
 
 #### Sliding Window – Fixed and Variable
 
-17. Find max sum of subarray of length *k*.
-    17.1. [2461] Maximum Sum of Distinct Subarrays With Length K
-18. [0209] Find smallest subarray with sum ≥ target.
+17. Find max sum of subarray of length *k*. ✅
+    17.1. [2461] Maximum Sum of Distinct Subarrays With Length K 🔄
+    17.2. [2841] Maximum Sum of Almost Unique Subarray 🔄
+18. [0209] Find smallest subarray with sum ≥ target. ✅
 19. [0340] Find longest substring with at most *k* distinct characters.
 20. [0003] Find longest substring without repeating characters.
     20.1. [0395] Longest Substring with At Least K Repeating Characters
